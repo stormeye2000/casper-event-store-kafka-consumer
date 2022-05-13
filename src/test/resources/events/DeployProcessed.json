@@ -1,0 +1,241 @@
+{
+	"DeployProcessed": {
+		"deploy_hash": "7fe4fc6e1d7086459e8f84eaed77cfdde493edfd3abd3e3decd7f472c5b86dea",
+		"account": "0203a810758f6a796c8648a836c519c7f62d4b364d7a711d1c0f3f9d6f8138c59f49",
+		"timestamp": "2022-05-09T14:16:34.355Z",
+		"ttl": "30m",
+		"dependencies": [],
+		"block_hash": "3adf0ce3316ec541ff7748da147e2f7dd17f58da28298a969921a57938b01d71",
+		"execution_result": {
+			"Success": {
+				"effect": {
+					"operations": [],
+					"transforms": [{
+						"key": "hash-8cf5e4acf51f54eb59291599187838dc3bc234089c46fc6ca8ad17e762ae4401",
+						"transform": "Identity"
+					}, {
+						"key": "hash-624dbe2395b9d9503fbee82162f1714ebff6b639f96d2084d26d944c354ec4c5",
+						"transform": "Identity"
+					}, {
+						"key": "hash-010c3fe81b7b862e50c77ef9a958a05bfa98444f26f96f23d37a13c96244cfb7",
+						"transform": "Identity"
+					}, {
+						"key": "hash-9824d60dc3a5c44a20b9fd260a412437933835b52fc683d8ae36e4ec2114843e",
+						"transform": "Identity"
+					}, {
+						"key": "balance-b9a5f8d574aa06a6fc23be18a1b7acec5204e3e73850073b7bc65eba91d02326",
+						"transform": "Identity"
+					}, {
+						"key": "balance-98d945f5324f865243b7c02c0417ab6eac361c5c56602fd42ced834a1ba201b6",
+						"transform": "Identity"
+					}, {
+						"key": "balance-b9a5f8d574aa06a6fc23be18a1b7acec5204e3e73850073b7bc65eba91d02326",
+						"transform": {
+							"WriteCLValue": {
+								"cl_type": "U512",
+								"bytes": "060030c1eede2c",
+								"parsed": "49336000000000"
+							}
+						}
+					}, {
+						"key": "balance-98d945f5324f865243b7c02c0417ab6eac361c5c56602fd42ced834a1ba201b6",
+						"transform": {
+							"AddUInt512": "1500000000"
+						}
+					}, {
+						"key": "hash-69106fcd2191bca4f21d3939f83e69acd411f71bdf5196654e5f0afd0ca1cd3f",
+						"transform": "Identity"
+					}, {
+						"key": "hash-07f325378c0ad7222cc084d2dc82fc289157ef2925099d56b61556702a69adf2",
+						"transform": "Identity"
+					}, {
+						"key": "hash-0c6666d7dafac7b8b4b5e9b805d194309e079a420535c65cf6df9419606cbcd7",
+						"transform": "Identity"
+					}, {
+						"key": "uref-39f6d2122e90276cbdefe367e1778055a6a1dee02aced2cdb5e242b530218554-000",
+						"transform": "Identity"
+					}, {
+						"key": "dictionary-016ed325371ed4f787344465681b468103ea002a3022f68507f983fb421b6628",
+						"transform": "Identity"
+					}, {
+						"key": "dictionary-016ed325371ed4f787344465681b468103ea002a3022f68507f983fb421b6628",
+						"transform": {
+							"WriteCLValue": {
+								"cl_type": "Any",
+								"bytes": "2200000001007bd7a4e7a47bf285491903fe073c60b4f1cf904097e63c4481d15a3f3ad389a50d0b200000002a7ef02f70d8d215a53b7fdaad10a2fadef99f283b099b92b619a47ce40316d2120000007a627974652d31302d507269736d20332d31",
+								"parsed": null
+							}
+						}
+					}, {
+						"key": "dictionary-d32621d6045b76f255c0a17ff1bf73d9342efac76792181627dd6916ac3cc19f",
+						"transform": "Identity"
+					}, {
+						"key": "dictionary-519da11e9832dc051b271446ae9cff766fb2b6c80432f24e9fe27eadf10ebb52",
+						"transform": "Identity"
+					}, {
+						"key": "dictionary-eb960700622fa54d8e11d04925bbbb3f2aab669b37988ff36204ecc8e84d3228",
+						"transform": "Identity"
+					}, {
+						"key": "dictionary-1ce4542c30422f65e5321a3de8f5621b9b30f17d3a962f49b03ebee172d08082",
+						"transform": {
+							"WriteCLValue": {
+								"cl_type": "Any",
+								"bytes": "030000000101c00d0720000000f3cc15e280d134cf300db7281b649eb24f48387adc0e51f7186db96d025dded74000000062643561363230626631396365663161646334613136336663613336613638376262656466663838636436346637633339383239336462343266323438366237",
+								"parsed": null
+							}
+						}
+					}, {
+						"key": "dictionary-db63796ef3a9c49c602f97ac84b46a9371cb81723ee71209288e944416550619",
+						"transform": {
+							"WriteCLValue": {
+								"cl_type": "Any",
+								"bytes": "1800000001130000007a627974652d31302d507269736d20332d31300d0a200000007f92c8a8b5ec1fd674d00cb27549baa8dd6fe8592c171bb24a89d06759d92c934000000039383864306465373133363135656165623665656236363863313563343935303839356439323731326231623036663863303335366663323364356436353931",
+								"parsed": null
+							}
+						}
+					}, {
+						"key": "dictionary-eb960700622fa54d8e11d04925bbbb3f2aab669b37988ff36204ecc8e84d3228",
+						"transform": {
+							"WriteCLValue": {
+								"cl_type": "Any",
+								"bytes": "01000000000d0a200000007f92c8a8b5ec1fd674d00cb27549baa8dd6fe8592c171bb24a89d06759d92c934000000038316437663363636563383339666464356464613439386433663164653039316430653266663532306664386433643561383336663639626635336363343864",
+								"parsed": null
+							}
+						}
+					}, {
+						"key": "dictionary-d32621d6045b76f255c0a17ff1bf73d9342efac76792181627dd6916ac3cc19f",
+						"transform": {
+							"WriteCLValue": {
+								"cl_type": "Any",
+								"bytes": "030000000101c90d0720000000e5309685a8de30bbeff2ae44c7afec01b8b7083e871248cd9ebc5f24cc8d3a364000000039303839373931353761623262383638353332646433396437303136663333633036363536383435396132646633383538363865386238336337666161326562",
+								"parsed": null
+							}
+						}
+					}, {
+						"key": "dictionary-519da11e9832dc051b271446ae9cff766fb2b6c80432f24e9fe27eadf10ebb52",
+						"transform": {
+							"WriteCLValue": {
+								"cl_type": "Any",
+								"bytes": "01000000000d0720000000f3cc15e280d134cf300db7281b649eb24f48387adc0e51f7186db96d025dded74000000035303061383666313365383030366663356263663633386163316463623933663033353861613632303631323531386337336166333130623862353863626363",
+								"parsed": null
+							}
+						}
+					}, {
+						"key": "dictionary-414e9510eb8c720c72647645bd02d4798fd8683bbe1c38d64fd7ddccacbbabb5",
+						"transform": "Identity"
+					}, {
+						"key": "dictionary-2ed04ae48c5643deb142a8f9655d810405db118d83b194222b70c976722e48c9",
+						"transform": {
+							"WriteCLValue": {
+								"cl_type": "Any",
+								"bytes": "030000000101060d0720000000f3cc15e280d134cf300db7281b649eb24f48387adc0e51f7186db96d025dded74000000038303639303932623863616233393562666439333837656639613934636439646136303438396132613031343236636265306136666535616238343666393732",
+								"parsed": null
+							}
+						}
+					}, {
+						"key": "dictionary-d4b882be0340dd646df0dbf367dc5c35907594471bef17c1ce4826e0863252e0",
+						"transform": {
+							"WriteCLValue": {
+								"cl_type": "Any",
+								"bytes": "1700000001120000007a627974652d31302d507269736d20332d310d0a200000007f92c8a8b5ec1fd674d00cb27549baa8dd6fe8592c171bb24a89d06759d92c934000000064376161343334643037343431633865336164646239663933373637623661353164366136653434656265353230666530663037336632663362356532353633",
+								"parsed": null
+							}
+						}
+					}, {
+						"key": "dictionary-414e9510eb8c720c72647645bd02d4798fd8683bbe1c38d64fd7ddccacbbabb5",
+						"transform": {
+							"WriteCLValue": {
+								"cl_type": "Any",
+								"bytes": "030000000101070d0720000000e5309685a8de30bbeff2ae44c7afec01b8b7083e871248cd9ebc5f24cc8d3a364000000037626437613465376134376266323835343931393033666530373363363062346631636639303430393765363363343438316431356133663361643338396135",
+								"parsed": null
+							}
+						}
+					}, {
+						"key": "uref-080d027d8a0f043ca1ca1dfbfb7eff68a6c6ba92751fbd0c370c52d7fe639b3a-000",
+						"transform": "Identity"
+					}, {
+						"key": "uref-f0f4691eb4d74e879e9d20efd227501623d43811dd7c0ea12471af85d0cad510-000",
+						"transform": {
+							"WriteCLValue": {
+								"cl_type": {
+									"Map": {
+										"key": "String",
+										"value": "String"
+									}
+								},
+								"bytes": "0500000015000000636f6e74726163745f7061636b6167655f6861736840000000303766333235333738633061643732323263633038346432646338326663323839313537656632393235303939643536623631353536373032613639616466320a0000006576656e745f747970651400000063657034375f7472616e736665725f746f6b656e09000000726563697069656e744e0000004b65793a3a4163636f756e742837626437613465376134376266323835343931393033666530373363363062346631636639303430393765363363343438316431356133663361643338396135290600000073656e6465724e0000004b65793a3a4163636f756e7428393038393739313537616232623836383533326464333964373031366633336330363635363834353961326466333835383638653862383363376661613265622908000000746f6b656e5f6964120000007a627974652d31302d507269736d20332d31",
+								"parsed": [{
+									"key": "contract_package_hash",
+									"value": "07f325378c0ad7222cc084d2dc82fc289157ef2925099d56b61556702a69adf2"
+								}, {
+									"key": "event_type",
+									"value": "cep47_transfer_token"
+								}, {
+									"key": "recipient",
+									"value": "Key::Account(7bd7a4e7a47bf285491903fe073c60b4f1cf904097e63c4481d15a3f3ad389a5)"
+								}, {
+									"key": "sender",
+									"value": "Key::Account(908979157ab2b868532dd39d7016f33c066568459a2df385868e8b83c7faa2eb)"
+								}, {
+									"key": "token_id",
+									"value": "zbyte-10-Prism 3-1"
+								}]
+							}
+						}
+					}, {
+						"key": "deploy-7fe4fc6e1d7086459e8f84eaed77cfdde493edfd3abd3e3decd7f472c5b86dea",
+						"transform": {
+							"WriteDeployInfo": {
+								"deploy_hash": "7fe4fc6e1d7086459e8f84eaed77cfdde493edfd3abd3e3decd7f472c5b86dea",
+								"transfers": [],
+								"from": "account-hash-908979157ab2b868532dd39d7016f33c066568459a2df385868e8b83c7faa2eb",
+								"source": "uref-b9a5f8d574aa06a6fc23be18a1b7acec5204e3e73850073b7bc65eba91d02326-007",
+								"gas": "1034109190"
+							}
+						}
+					}, {
+						"key": "hash-8cf5e4acf51f54eb59291599187838dc3bc234089c46fc6ca8ad17e762ae4401",
+						"transform": "Identity"
+					}, {
+						"key": "hash-624dbe2395b9d9503fbee82162f1714ebff6b639f96d2084d26d944c354ec4c5",
+						"transform": "Identity"
+					}, {
+						"key": "balance-98d945f5324f865243b7c02c0417ab6eac361c5c56602fd42ced834a1ba201b6",
+						"transform": "Identity"
+					}, {
+						"key": "hash-8cf5e4acf51f54eb59291599187838dc3bc234089c46fc6ca8ad17e762ae4401",
+						"transform": "Identity"
+					}, {
+						"key": "hash-010c3fe81b7b862e50c77ef9a958a05bfa98444f26f96f23d37a13c96244cfb7",
+						"transform": "Identity"
+					}, {
+						"key": "hash-9824d60dc3a5c44a20b9fd260a412437933835b52fc683d8ae36e4ec2114843e",
+						"transform": "Identity"
+					}, {
+						"key": "balance-98d945f5324f865243b7c02c0417ab6eac361c5c56602fd42ced834a1ba201b6",
+						"transform": "Identity"
+					}, {
+						"key": "balance-bb9f47c30ddbe192438fad10b7db8200247529d6592af7159d92c5f3aa7716a1",
+						"transform": "Identity"
+					}, {
+						"key": "balance-98d945f5324f865243b7c02c0417ab6eac361c5c56602fd42ced834a1ba201b6",
+						"transform": {
+							"WriteCLValue": {
+								"cl_type": "U512",
+								"bytes": "00",
+								"parsed": "0"
+							}
+						}
+					}, {
+						"key": "balance-bb9f47c30ddbe192438fad10b7db8200247529d6592af7159d92c5f3aa7716a1",
+						"transform": {
+							"AddUInt512": "1500000000"
+						}
+					}]
+				},
+				"transfers": [],
+				"cost": "1034109190"
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+{
+  "BlockAdded": {
+    "block_hash": "77244622c0b5a3706c59fe4da1ae0794c3a5f5d4c49752b39a90179850a33a39",
+    "block": {
+      "hash": "77244622c0b5a3706c59fe4da1ae0794c3a5f5d4c49752b39a90179850a33a39",
+      "header": {
+        "parent_hash": "3adf0ce3316ec541ff7748da147e2f7dd17f58da28298a969921a57938b01d71",
+        "state_root_hash": "a157306b0dedf58c7be807e458843dd181df653f7776f6b8facc41ec580ea44e",
+        "body_hash": "2b475c3a4e2e7c443ce4d72e1fc5b2de75e471a30dbb2563ae9d614faa8ab2a4",
+        "random_bit": true,
+        "accumulated_seed": "36955cec1412ced15e55792bb352893eee26fb6846a88f0ba247c3cea466749b",
+        "era_end": null,
+        "timestamp": "2022-05-09T14:17:51.360Z",
+        "era_id": 4738,
+        "height": 758348,
+        "protocol_version": "1.4.5"
+      },
+      "body": {
+        "proposer": "0144e35abc4886168a53338539a8a3649ab1257d9f0c235ce38961624a025d40dd",
+        "deploy_hashes": [],
+        "transfer_hashes": []
+      },
+      "proofs": []
+    }
+  }
+}
