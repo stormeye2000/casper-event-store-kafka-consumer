@@ -15,7 +15,9 @@ public class StartUp implements ApplicationRunner {
     }
 
     @Override
-    public void run(final ApplicationArguments args) throws Exception {
+    public void run(final ApplicationArguments args) {
         service.run();
     }
+
+
 }

@@ -1,19 +1,7 @@
-services:
-  kafka:
-    server: ${KAFKA_BOOTSTRAP_SERVER:localhost}
-    port: ${KAFKA_BOOTSTRAP_PORT:9092}
-    client: ${KAFKA_CLIENT_ID:stormeye-kafka}
-    topics:
-      - DeployProcessed
-      - BlockAdded
-      - DeployAccepted
-      - FinalitySignature
 logging:
   level:
     com:
       stormeye: ${LOG_LEVEL:DEBUG}
-server:
-  port: 8083
 spring:
   output:
     ansi:

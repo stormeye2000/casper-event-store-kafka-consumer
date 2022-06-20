@@ -3,10 +3,8 @@ package com.stormeye.consumer.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import com.stormeye.consumer.config.KafkaConsumer;
-import com.stormeye.consumer.config.ServiceProperties;
 
 import java.time.Duration;
 import reactor.core.publisher.Flux;
@@ -21,28 +19,27 @@ public class KafkaSource extends KafkaConsumer {
     private static final Logger log = LoggerFactory.getLogger(KafkaReceiver.class.getName());
 
     private final Scheduler scheduler;
-    private final ServiceProperties properties;
+    private final TopicsService topicsService;
 
-    public KafkaSource(@Qualifier("ServiceProperties") final ServiceProperties properties) {
-        super(properties);
+    public KafkaSource(final TopicsService topicsService) {
+        this.topicsService = topicsService;
         this.scheduler = Schedulers.newSingle("event-scheduler", true);
-        this.properties = properties;
     }
 
     public Flux<?> flux() {
 
-        return KafkaReceiver.create(receiverOptions(properties.getKafka().getTopics()).commitInterval(Duration.ZERO))
+        return KafkaReceiver.create(receiverOptions(topicsService.getTopics()).commitInterval(Duration.ZERO))
                 .receive()
                 .publishOn(scheduler)
-                .concatMap(m -> storeInDB(m.value())
+                .concatMap(m -> processEvent(m.value())
                         .thenEmpty(m.receiverOffset().commit()))
                 .retry()
                 .doOnCancel(this::close);
     }
 
 
-    public Mono<Void> storeInDB(String person) {
-        log.info("Successfully processed person with id {} from Kafka", person);
+    public Mono<Void> processEvent(String event) {
+        log.info("Successfully processed topic [{}]: event {}", topicsService.getTopic(event), event);
         return Mono.empty();
     }
 
