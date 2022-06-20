@@ -36,3 +36,8 @@ jobs:
       env:
         USERNAME: ${{ github.actor }}
         TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Run Kafka Cosumer
+      run: |
+        sudo pkill -f 'java -jar'
+        sudo java -jar -Dspring.profiles.active=dev /home/ec2-user/actions-runner/cspr-kafka-consumer/casper-event-store-kafka-consumer/casper-event-store-kafka-consumer/build/libs/consumer-0.0.1-SNAPSHOT.jar &
+        
