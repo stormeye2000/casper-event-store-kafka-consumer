@@ -5,14 +5,12 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.test.context.SpringBootTest;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.stormeye.consumer.service.JsonService;
 
 @SpringBootTest(classes = {JsonService.class})
-@EnableConfigurationProperties(value = {ServiceProperties.class})
 @EnableAutoConfiguration
 public class TestJsonService {
 
