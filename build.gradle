@@ -30,6 +30,17 @@ dependencies {
 	testImplementation 'org.springframework.kafka:spring-kafka-test:2.8.5'
 }
 
+tasks.register("bootRunDev") {
+	group = "application"
+	description = "Runs the Spring Boot application with the dev profile"
+	doFirst {
+		tasks.bootRun.configure {
+			systemProperty("spring.profiles.active", "dev")
+		}
+	}
+	finalizedBy("bootRun")
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }

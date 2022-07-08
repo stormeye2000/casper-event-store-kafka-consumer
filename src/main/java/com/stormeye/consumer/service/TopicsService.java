@@ -22,7 +22,7 @@ public class TopicsService {
         return null;
     }
 
-    public List<String> getTopics(){
+    public List<String> getTopics() {
         return Stream.of(Topics.values())
                 .map(Enum::name)
                 .collect(Collectors.toList());

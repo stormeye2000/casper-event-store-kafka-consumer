@@ -8,6 +8,6 @@ logging:
     name: /var/log/cspr-consumer.log
 spring:
   kafka:
-    bootstrap-servers: 172.31.8.239:9092
+    bootstrap-servers: http://kafka-service:9093
     consumer:
       client-id: stormeye-kafka-dev
