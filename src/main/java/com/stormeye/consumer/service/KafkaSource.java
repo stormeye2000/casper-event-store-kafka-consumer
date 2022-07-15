@@ -22,6 +22,7 @@ public class KafkaSource extends KafkaConsumer {
     private final TopicsService topicsService;
 
     public KafkaSource(final TopicsService topicsService) {
+        super(env);
         this.topicsService = topicsService;
         this.scheduler = Schedulers.newSingle("event-scheduler", true);
     }

@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.Environment;
 
 import java.util.*;
 import reactor.core.Disposable;
@@ -18,13 +19,18 @@ public abstract class KafkaConsumer {
 
     private static final Logger log = LoggerFactory.getLogger(KafkaConsumer.class.getName());
 
-    @Value("${spring.kafka.bootstrap-servers}")
-    private String bootstrapServers;
+//    @Value("${spring.kafka.bootstrap-servers}")
+//    private String bootstrapServers;
     @Value("${spring.kafka.consumer.client-id}")
     private String clientId;
 
+    private final Environment env;
 
     final List<Disposable> disposables = new ArrayList<>();
+
+    protected KafkaConsumer(final Environment env) {
+        this.env = env;
+    }
 
     public abstract Flux<?> flux();
 
@@ -40,7 +46,12 @@ public abstract class KafkaConsumer {
 
     public ReceiverOptions<Integer, String> receiverOptions() {
         Map<String, Object> props = new HashMap<>();
+
+        final String bootstrapServers = env.getProperty("KAFKA_SERVICE_SERVICE_HOST") + ":"
+                + env.getProperty("KAFKA_SERVICE_SERVICE_PORT");
+
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
+
         //Group id is client_id from producer i think
         props.put(ConsumerConfig.GROUP_ID_CONFIG, clientId);
         props.put(ConsumerConfig.CLIENT_ID_CONFIG, clientId);
