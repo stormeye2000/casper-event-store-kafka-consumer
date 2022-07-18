@@ -3,4 +3,4 @@ COPY . /home/gradle/source
 WORKDIR /home/gradle/source
 RUN ./gradlew clean build -x test
 
-CMD ["java", "-jar", "build/libs/consumer.jar"]
+CMD ["java", "-jar", "build/libs/consumer.jar", "--spring.profiles.active=dev"]

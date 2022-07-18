@@ -3,6 +3,7 @@ package com.stormeye.consumer.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 import com.stormeye.consumer.config.KafkaConsumer;
 
@@ -20,10 +21,12 @@ public class KafkaSource extends KafkaConsumer {
 
     private final Scheduler scheduler;
     private final TopicsService topicsService;
+    private final Environment environment;
 
-    public KafkaSource(final TopicsService topicsService) {
-        super(env);
+    public KafkaSource(final TopicsService topicsService, final Environment environment) {
+        super(environment);
         this.topicsService = topicsService;
+        this.environment = environment;
         this.scheduler = Schedulers.newSingle("event-scheduler", true);
     }
 

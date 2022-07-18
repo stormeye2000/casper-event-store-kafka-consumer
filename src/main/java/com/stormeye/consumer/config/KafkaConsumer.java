@@ -32,6 +32,8 @@ public abstract class KafkaConsumer {
         this.env = env;
     }
 
+    public KafkaConsumer() {this.env=null;}
+
     public abstract Flux<?> flux();
 
     public void run() {
@@ -46,6 +48,8 @@ public abstract class KafkaConsumer {
 
     public ReceiverOptions<Integer, String> receiverOptions() {
         Map<String, Object> props = new HashMap<>();
+
+        assert env != null;
 
         final String bootstrapServers = env.getProperty("KAFKA_SERVICE_SERVICE_HOST") + ":"
                 + env.getProperty("KAFKA_SERVICE_SERVICE_PORT");
